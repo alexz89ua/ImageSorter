@@ -2,12 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
-    <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
-            />
+              android:layout_height="fill_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:weightSum="2"
+                  android:orientation="horizontal">
+
+        <Spinner android:layout_width="match_parent"
+                 android:layout_height="48dp"
+                 android:layout_weight="1"
+                 android:id="@+id/from"/>
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/arrow_skip_right"/>
+
+        <Spinner android:layout_width="match_parent"
+                 android:layout_height="48dp"
+                 android:layout_weight="1"
+                 android:id="@+id/to"/>
+
+    </LinearLayout>
+
+    <ListView android:id="@+id/activity_googlecards_listview"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#e2e2e2"
+              android:clipToPadding="false"
+              android:divider="@null"
+              android:dividerHeight="16dp"
+              android:fadingEdge="none"
+              android:padding="16dp"
+              android:layout_marginTop="1dp"
+              android:scrollbarStyle="outsideOverlay"/>
 </LinearLayout>
 
